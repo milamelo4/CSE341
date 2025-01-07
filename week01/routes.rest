@@ -1,0 +1,5 @@
+### test
+GET http://127.0.0.1:3000/
+
+### welcome
+GET http://127.0.0.1:3000/welcome/
