@@ -7,11 +7,11 @@ const express = require('express');
 const app = express();
 const hostname = '127.0.0.1';
 const port = 3000;
-const router = require('./routes/index.js');
+const router = require('./routes/');
 
 // router starting from the root URL ('/')
 app.use('/', router);
 
 // Start the server
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || port);
 console.log(`Server running at http://${hostname}:${process.env.PORT || port}/`);
