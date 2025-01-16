@@ -6,12 +6,27 @@
 const express = require('express');
 const app = express();
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT || 3000;
 const router = require('./routes/');
+const bodyParser = require('body-parser');
+const mongodb = require('./db/connect');
 
 // router starting from the root URL ('/')
-app.use('/', router);
+app
+  .use(bodyParser.json())
+  .use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    next();
+  })
+  .use("/", require("./routes")); // Ensure routes are correctly set up
 
-// Start the server
-app.listen(process.env.PORT || port);
-console.log(`Server running at http://${hostname}:${process.env.PORT || port}/`);
+(async () => {
+  try {
+    await mongodb.initDb();
+    app.listen(port, () => {
+      console.log(`Server running at http://127.0.0.1:${port}/`);
+    });
+  } catch (err) {
+    console.error("Failed to initialize the database:", err);
+  }
+})();
