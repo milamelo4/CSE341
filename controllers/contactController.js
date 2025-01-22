@@ -86,7 +86,7 @@ const updateContact = async (req, res) => {
       return res.status(404).json({ error: "Contact not found" });
     }
 
-    res.status(204).send(); // 204 No Content updated, rubric
+    res.status(204).send(); // 204 Updated but no content (rubric)
   } catch (err) {
     console.error("Error updating contact:", err);
     res.status(500).json({ error: "Failed to update contact" }); // error server

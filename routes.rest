@@ -1,33 +1,25 @@
+##################################
+# Localhost URL's
+#################################
+
 ### test
 GET http://127.0.0.1:3000/
 
 ### welcome
 GET http://127.0.0.1:3000/welcome/
 
-# ### example
-# POST https://example.com/comments HTTP/1.1
-# content-type: application/json
-
-# {
-#     "name": "sample",
-#     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
-# }
-
-### contact
+### Get all contacts
 GET http://127.0.0.1:3000/contact
 
-### contact by id
+### Get contact by id
 GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
-
-### test Render
-GET https://cse341-4zv7.onrender.com/contact
 
 ### Create a new contact
 POST http://localhost:3000/contact
 Content-Type: application/json
 
 {
-    "firstName": "Cibely",
+    "firstName": "Maria",
     "lastName": "Melo",
     "email": "cibely@example.com",
     "favoriteColor": "blue",
@@ -35,7 +27,7 @@ Content-Type: application/json
 }
 
 ### view new contact
-GET http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
+GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
 
 ### update contact
 PUT http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
@@ -51,3 +43,44 @@ Content-Type: application/json
 
 ### delete contact
 DELETE http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
+
+##################################
+# Render URL's
+#################################
+
+### Get all contacts
+GET https://cse341-4zv7.onrender.com/contact
+
+### Get contact by id
+GET https://cse341-4zv7.onrender.com/contact/67895de8581a6bb051697336
+
+### Create a new contact
+POST https://cse341-4zv7.onrender.com/contact
+Content-Type: application/json
+
+{
+    "firstName": "Maria",
+    "lastName": "Melo",
+    "email": "cibely@example.com",
+    "favoriteColor": "blue",
+    "birthDate": "2000-01-01"
+}
+
+### view new contact
+GET https://cse341-4zv7.onrender.com/contact/67895de8581a6bb051697336
+
+### update contact
+PUT https://cse341-4zv7.onrender.com/contact/67914ec21bbccc854348ba7f
+Content-Type: application/json
+
+{
+    "firstName": "Cibely",
+    "lastName": "Melo",
+    "email": "cibely.melo@example.com",
+    "favoriteColor": "blue",
+    "birthDate": "1994-04-04"
+}   
+
+### delete contact
+DELETE https://cse341-4zv7.onrender.com/contact/67914ec21bbccc854348ba7f
+
