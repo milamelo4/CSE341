@@ -19,14 +19,19 @@ GET http://127.0.0.1:3000/contact
 ### contact by id
 GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
 
+### test render
+GET https://cse341-4zv7.onrender.com/contact
+
 ### Create a new contact
 POST http://localhost:3000/contact
 Content-Type: application/json
 
 {
-    "name": "Cibely Melo",
+    "firstName": "Cibely Melo",
+    "lastName": "Melo",
     "email": "cibely@example.com",
-    "phone": "8011234567"
+    "favoriteColor": "blue",
+    "birthDate": "2000-01-01"
 }
 
 ### view new contact
