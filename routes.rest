@@ -18,3 +18,29 @@ GET http://127.0.0.1:3000/contact
 
 ### contact by id
 GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
+
+### Create a new contact
+POST http://localhost:3000/contact
+Content-Type: application/json
+
+{
+    "name": "Cibely Melo",
+    "email": "cibely@example.com",
+    "phone": "8011234567"
+}
+
+### view new contact
+GET http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
+
+### update contact
+PUT http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
+Content-Type: application/json
+
+{
+    "name": "Cibely Melo",
+    "email": "cibely.melo@example.com",
+    "phone": "8011234567" 
+}   
+
+### delete contact
+DELETE http://127.0.0.1:3000/contact/67914524dbade0c2de4822e7
