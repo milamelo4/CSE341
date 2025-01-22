@@ -19,7 +19,7 @@ GET http://127.0.0.1:3000/contact
 ### contact by id
 GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
 
-### test render
+### test Render
 GET https://cse341-4zv7.onrender.com/contact
 
 ### Create a new contact
@@ -27,7 +27,7 @@ POST http://localhost:3000/contact
 Content-Type: application/json
 
 {
-    "firstName": "Cibely Melo",
+    "firstName": "Cibely",
     "lastName": "Melo",
     "email": "cibely@example.com",
     "favoriteColor": "blue",
@@ -42,10 +42,12 @@ PUT http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
 Content-Type: application/json
 
 {
-    "name": "Cibely Melo",
+    "firstName": "Cibely",
+    "lastName": "Melo",
     "email": "cibely.melo@example.com",
-    "phone": "8011234567" 
+    "favoriteColor": "blue",
+    "birthDate": "1994-04-04"
 }   
 
 ### delete contact
-DELETE http://127.0.0.1:3000/contact/67914524dbade0c2de4822e7
+DELETE http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
