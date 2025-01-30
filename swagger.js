@@ -5,7 +5,10 @@ const doc = {
     title: "Contacts API",
     description: "API documentation for the Contacts project",
   },
-  host: "localhost:3000", 
+  host:
+    process.env.NODE_ENV === "production"
+      ? "cse341-4zv7.onrender.com"
+      : "localhost:3000", // Dynamic host based on environment
   schemes: ["http"],
 };
 
