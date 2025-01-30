@@ -2,11 +2,6 @@
 # Localhost URL's
 #################################
 
-### test
-GET http://127.0.0.1:3000/
-
-### welcome
-GET http://127.0.0.1:3000/welcome/
 
 ### Get all contacts
 GET http://127.0.0.1:3000/contact
@@ -19,18 +14,18 @@ POST http://localhost:3000/contact
 Content-Type: application/json
 
 {
-    "firstName": "Maria",
+    "firstName": "Cibely",
     "lastName": "Melo",
-    "email": "cibely@example.com",
+    "email": "ci@example.com",
     "favoriteColor": "blue",
-    "birthDate": "2000-01-01"
+    "birthday": "2000-01-01"
 }
 
 ### view new contact
 GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
 
 ### update contact
-PUT http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
+PUT http://127.0.0.1:3000/contact/67915d738d3af954c90b4636
 Content-Type: application/json
 
 {
@@ -38,11 +33,11 @@ Content-Type: application/json
     "lastName": "Melo",
     "email": "cibely.melo@example.com",
     "favoriteColor": "blue",
-    "birthDate": "1994-04-04"
+    "birthday": "1994-04-04"
 }   
 
 ### delete contact
-DELETE http://127.0.0.1:3000/contact/67914ec21bbccc854348ba7f
+DELETE http://127.0.0.1:3000/contact/6793f984ec6f01cea579dfbe
 
 ##################################
 # Render URL's

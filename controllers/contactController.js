@@ -34,16 +34,16 @@ const getContactById = async (req, res) => {
 // createContact
 const createContact = async (req, res) => {
   try {
-    const { firstName, lastName, email, favoriteColor, birthDate } = req.body; //validation
+    const { firstName, lastName, email, favoriteColor, birthday } = req.body; //validation
 
-    if (!firstName || !lastName ||  !favoriteColor || !email || !birthDate) {
+    if (!firstName || !lastName ||  !favoriteColor || !email || !birthday) {
       return res
         .status(400)
         .json({ error: "All fields are required." });
     }
 
     const db = mongodb.getDb(); // connect to db
-    const newContact = { firstName, lastName, email, favoriteColor, birthDate }; // Only insert validated fields
+    const newContact = { firstName, lastName, email, favoriteColor, birthday }; // Only insert validated fields
     const result = await db.collection("contacts").insertOne(newContact);
 
     res
@@ -61,14 +61,14 @@ const createContact = async (req, res) => {
 // updateContact
 const updateContact = async (req, res) => {
   try {
-    const { firstName, lastName, email, favoriteColor, birthDate } = req.body;
+    const { firstName, lastName, email, favoriteColor, birthday } = req.body;
 
     if (
       !firstName ||
       !lastName ||
       !favoriteColor ||
       !email ||
-      !birthDate) {
+      !birthday) {
       return res
         .status(400)
         .json({ error: "All fields are required." }); // Validation
@@ -76,7 +76,7 @@ const updateContact = async (req, res) => {
 
     const db = mongodb.getDb();
     const contactId = new ObjectId(req.params.id); 
-    const updatedContact = { firstName, lastName, email, favoriteColor, birthDate }; // Only update validated fields
+    const updatedContact = { firstName, lastName, email, favoriteColor, birthday }; // Only update validated fields
 
     const result = await db
       .collection("contacts")
