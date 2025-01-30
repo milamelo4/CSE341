@@ -3,14 +3,14 @@
 #################################
 
 
-### Get all contacts
-GET http://127.0.0.1:3000/contact
+### Get all contactss
+GET http://127.0.0.1:3000/contacts
 
-### Get contact by id
-GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
+### Get contacts by id
+GET http://127.0.0.1:3000/contacts/67895de8581a6bb051697336
 
-### Create a new contact
-POST http://localhost:3000/contact
+### Create a new contacts
+POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
@@ -21,11 +21,11 @@ Content-Type: application/json
     "birthday": "2000-01-01"
 }
 
-### view new contact
-GET http://127.0.0.1:3000/contact/67895de8581a6bb051697336
+### view new contacts
+GET http://127.0.0.1:3000/contacts/67895de8581a6bb051697336
 
-### update contact
-PUT http://127.0.0.1:3000/contact/67915d738d3af954c90b4636
+### update contacts
+PUT http://127.0.0.1:3000/contacts/67915d738d3af954c90b4636
 Content-Type: application/json
 
 {
@@ -36,21 +36,21 @@ Content-Type: application/json
     "birthday": "1994-04-04"
 }   
 
-### delete contact
-DELETE http://127.0.0.1:3000/contact/6793f984ec6f01cea579dfbe
+### delete contacts
+DELETE http://127.0.0.1:3000/contacts/6793f984ec6f01cea579dfbe
 
 ##################################
 # Render URL's
 #################################
 
 ### Get all contacts
-GET https://cse341-4zv7.onrender.com/contact
+GET https://cse341-4zv7.onrender.com/contacts
 
-### Get contact by id
-GET https://cse341-4zv7.onrender.com/contact/67895de8581a6bb051697336
+### Get contacts by id
+GET https://cse341-4zv7.onrender.com/contacts/67895de8581a6bb051697336
 
-### Create a new contact
-POST https://cse341-4zv7.onrender.com/contact
+### Create a new contacts
+POST https://cse341-4zv7.onrender.com/contacts
 Content-Type: application/json
 
 {
@@ -61,11 +61,11 @@ Content-Type: application/json
     "birthDate": "2000-01-01"
 }
 
-### view new contact
-GET https://cse341-4zv7.onrender.com/contact/67895de8581a6bb051697336
+### view new contacts
+GET https://cse341-4zv7.onrender.com/contacts/67895de8581a6bb051697336
 
-### update contact
-PUT https://cse341-4zv7.onrender.com/contact/67914ec21bbccc854348ba7f
+### update contacts
+PUT https://cse341-4zv7.onrender.com/contacts/67914ec21bbccc854348ba7f
 Content-Type: application/json
 
 {
@@ -76,6 +76,6 @@ Content-Type: application/json
     "birthDate": "1994-04-04"
 }   
 
-### delete contact
-DELETE https://cse341-4zv7.onrender.com/contact/67914ec21bbccc854348ba7f
+### delete contacts
+DELETE https://cse341-4zv7.onrender.com/contacts/67914ec21bbccc854348ba7f
 

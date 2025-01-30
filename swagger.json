@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "REST API",
+    "title": "contacts API",
     "description": ""
   },
   "host": "cse341-4zv7.onrender.com",
@@ -13,7 +13,7 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "description": "This is the welcome page",
         "responses": {
           "200": {
             "description": "OK"
@@ -21,7 +21,7 @@
         }
       }
     },
-    "/contact/": {
+    "/contacts/": {
       "get": {
         "description": "",
         "responses": {
@@ -74,7 +74,7 @@
         }
       }
     },
-    "/contact/{id}": {
+    "/contacts/{id}": {
       "get": {
         "description": "",
         "parameters": [

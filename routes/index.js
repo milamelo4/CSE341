@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 });
 
 // Use the routes defined in contactRoute.js for `/contact`
-router.use("/contact", require("./contactRoute"));
+router.use("/contacts", require("./contactRoute"));
 
 // Export the routes
 module.exports = router;
