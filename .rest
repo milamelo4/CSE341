@@ -1,9 +1,9 @@
 ##################################
-# Localhost URL's
+# HTTP Localhost Request
 #################################
 
 
-### Get all contactss
+### Get all contacts
 GET http://127.0.0.1:3000/contacts
 
 ### Get contacts by id
@@ -40,7 +40,7 @@ Content-Type: application/json
 DELETE http://127.0.0.1:3000/contacts/6793f984ec6f01cea579dfbe
 
 ##################################
-# Render URL's
+# HTTPS Render Request
 #################################
 
 ### Get all contacts
@@ -58,7 +58,7 @@ Content-Type: application/json
     "lastName": "Melo",
     "email": "cibely@example.com",
     "favoriteColor": "blue",
-    "birthDate": "2000-01-01"
+    "birthday": "2000-01-01"
 }
 
 ### view new contacts

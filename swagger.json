@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "contacts API",
+    "title": "Contacts API",
     "description": ""
   },
   "host": "cse341-4zv7.onrender.com",
@@ -10,17 +10,7 @@
   "schemes": [
     "https"
   ],
-  "paths": {
-    "/": {
-      "get": {
-        "description": "This is the welcome page",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
+  "paths": {    
     "/contacts/": {
       "get": {
         "description": "",

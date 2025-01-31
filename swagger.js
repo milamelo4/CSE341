@@ -8,13 +8,17 @@ const doc = {
   host:
     process.env.NODE_ENV === "production"
       ? "cse341-4zv7.onrender.com"
-      : "localhost:3000", // Dynamic host based on environment
-  schemes: [process.env.NODE_ENV === "production" ? "https" : "http"], // Dynamic schemes based on environment
-  paths: {}, // Add your paths here
+      : "localhost:3000", // Use Render host in production, localhost otherwise
+  schemes: [
+    process.env.NODE_ENV === "production" ? "https" : "http", // Use HTTPS in production
+  ],
+  paths: {}, 
 };
 
-const outputFile = "./swagger.json";
-const endpointsFiles = ["./routes/index.js"];
+const outputFile = "./swagger.json"; // Output file for the generated Swagger documentation
+const endpointsFiles = ["./routes/index.js"]; // Entry point for your API routes
 
-// Pass doc to swaggerAutogen to generate the swagger.json
-swaggerAutogen(outputFile, endpointsFiles, doc);
+// Generate swagger.json using the defined doc and endpoint files
+swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
+  console.log("Swagger documentation generated successfully!");
+});

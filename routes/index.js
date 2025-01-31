@@ -1,10 +1,9 @@
 // Requirements
 const router = require("express").Router();
-const testRoute = require("../controllers/lesson1");
 
-//Welcome route
+//Root - Welcome route
 router.get("/", (req, res) => {
-  res.send("Welcome to the Contacts API!");
+  res.send("<h1>Welcome to my Contacts API!</h1>");
 });
 
 // Use the routes defined in contactRoute.js for `/contact`

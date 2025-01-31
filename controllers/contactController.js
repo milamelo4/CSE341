@@ -1,6 +1,7 @@
 const mongodb = require("../db/connect");
 const { ObjectId } = require('mongodb'); // Import ObjectId to work with MongoDB IDs
 
+// Get all contacts
 const getAllContacts = async (req, res) => {
   try {
     const db = mongodb.getDb();
@@ -13,7 +14,7 @@ const getAllContacts = async (req, res) => {
   }
 };
 
-// route to get a contact by id 
+// Get contact by ID
 const getContactById = async (req, res) => {
   try {
     const db = mongodb.getDb();
@@ -31,7 +32,7 @@ const getContactById = async (req, res) => {
   }
 };
 
-// createContact
+// Create a new contact
 const createContact = async (req, res) => {
   try {
     const { firstName, lastName, email, favoriteColor, birthday } = req.body; //validation
@@ -58,7 +59,7 @@ const createContact = async (req, res) => {
   }
 };
 
-// updateContact
+// Update a contact by ID
 const updateContact = async (req, res) => {
   try {
     const { firstName, lastName, email, favoriteColor, birthday } = req.body;
@@ -93,7 +94,7 @@ const updateContact = async (req, res) => {
   }
 };
 
-// deleteContact
+// Delete a contact by ID
 const deleteContact = async (req, res) => {
   try {
     const db = mongodb.getDb();
@@ -111,6 +112,7 @@ const deleteContact = async (req, res) => {
   }
 };
 
+// Export the functions
 module.exports = { 
   createContact, 
   getAllContacts,

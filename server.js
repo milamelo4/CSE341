@@ -1,8 +1,3 @@
-// Requirements:
-// 1. Create a simple web server using Node.js.
-// 2. The server should respond to requests with test and my name as message.
-// 3. The server should listen on port 3000.
-
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,13 +7,16 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 const cors = require("cors");
 
+// Middleware
 app.use(cors());
+app.use(bodyParser.json());
 
-app
-  .use(bodyParser.json())  
+// API routes
+app   
   .use("/", require("./routes")) // Ensure routes are correctly set up
   .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+// Start the server and initialize the database
 (async () => {
   try {
     await mongodb.initDb();
