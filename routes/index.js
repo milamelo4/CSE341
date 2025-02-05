@@ -9,5 +9,8 @@ router.get("/", (req, res) => {
 // Use the routes defined in contactRoute.js for `/contact`
 router.use("/contacts", require("./contactRoute"));
 
+// Use the routes defined in swagger.js for `/api-docs`
+router.use('/', require('./swagger')); // Swagger route added
+
 // Export the routes
 module.exports = router;
