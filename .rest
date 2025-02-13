@@ -7,16 +7,16 @@
 GET http://127.0.0.1:3000/contacts
 
 ### Get contacts by id
-GET http://127.0.0.1:3000/contacts/67895de8581a6bb051697336
+GET http://127.0.0.1:3000/contacts/67895de8581a6bb05169733
 
 ### Create a new contacts
 POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Cibely",
+    "firstName": "",
     "lastName": "Melo",
-    "email": "ci@example.com",
+    "email": "ci@example",
     "favoriteColor": "blue",
     "birthday": "2000-01-01"
 }
@@ -77,5 +77,5 @@ Content-Type: application/json
 }   
 
 ### delete contacts
-DELETE https://cse341-4zv7.onrender.com/contacts/67914ec21bbccc854348ba7f
+DELETE https://cse341-4zv7.onrender.com/contacts/679d235af25e02d75d689377
 
